@@ -26,7 +26,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 use Sonata\MediaBundle\Model\Media;
-use Sonata\MediaBundle\Model\MediaManagerInterface;
+use Sonata\CoreBundle\Model\ManagerInterface;
 use Sonata\MediaBundle\Provider\Pool;
 
 /**
@@ -41,7 +41,7 @@ use Sonata\MediaBundle\Provider\Pool;
 class MediaController
 {
     /**
-     * @var MediaManagerInterface
+     * @var ManagerInterface
      */
     protected $mediaManager;
 
@@ -58,11 +58,11 @@ class MediaController
     /**
      * Constructor
      *
-     * @param MediaManagerInterface $mediaManager
+     * @param ManagerInterface $mediaManager
      * @param Pool                  $mediaPool
      * @param FormFactoryInterface  $formFactory
      */
-    public function __construct(MediaManagerInterface $mediaManager, Pool $mediaPool, FormFactoryInterface $formFactory)
+    public function __construct(ManagerInterface $mediaManager, Pool $mediaPool, FormFactoryInterface $formFactory)
     {
         $this->mediaManager = $mediaManager;
         $this->mediaPool    = $mediaPool;

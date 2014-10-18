@@ -15,8 +15,9 @@ use Sonata\CoreBundle\Model\BaseDocumentManager;
 use Sonata\MediaBundle\Model\GalleryManager as AbstractGalleryManager;
 use Sonata\MediaBundle\Model\GalleryInterface;
 use Doctrine\ODM\MongoDB\DocumentManager;
+use Sonata\MediaBundle\Model\GalleryManagerInterface;
 
-class GalleryManager extends BaseDocumentManager
+class GalleryManager extends BaseDocumentManager implements GalleryManagerInterface
 {
 
     /**

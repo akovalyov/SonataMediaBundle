@@ -23,7 +23,7 @@ use Sonata\MediaBundle\Model\GalleryInterface;
 use Sonata\MediaBundle\Model\GalleryManagerInterface;
 use Symfony\Component\Form\FormInterface;
 use Sonata\MediaBundle\Model\MediaInterface;
-use Sonata\MediaBundle\Model\MediaManagerInterface;
+use Sonata\CoreBundle\Model\ManagerInterface;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -44,7 +44,7 @@ class GalleryController
     protected $galleryManager;
 
     /**
-     * @var MediaManagerInterface
+     * @var ManagerInterface
      */
     protected $mediaManager;
 
@@ -62,11 +62,11 @@ class GalleryController
      * Constructor
      *
      * @param GalleryManagerInterface $galleryManager
-     * @param MediaManagerInterface   $mediaManager
+     * @param ManagerInterface   $mediaManager
      * @param FormFactoryInterface    $formFactory
      * @param string                  $galleryHasMediaClass
      */
-    public function __construct(GalleryManagerInterface $galleryManager, MediaManagerInterface $mediaManager, FormFactoryInterface $formFactory, $galleryHasMediaClass)
+    public function __construct(GalleryManagerInterface $galleryManager, ManagerInterface $mediaManager, FormFactoryInterface $formFactory, $galleryHasMediaClass)
     {
         $this->galleryManager       = $galleryManager;
         $this->mediaManager         = $mediaManager;

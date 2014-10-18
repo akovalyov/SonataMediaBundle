@@ -61,9 +61,9 @@ class SonataMediaExtension extends Extension
 
         $bundles = $container->getParameter('kernel.bundles');
 
-        if ('doctrine_orm' == $config['db_driver'] && isset($bundles['FOSRestBundle']) && isset($bundles['NelmioApiDocBundle'])) {
+//        if ('doctrine_orm' == $config['db_driver'] && isset($bundles['FOSRestBundle']) && isset($bundles['NelmioApiDocBundle'])) {
             $loader->load('api_controllers.xml');
-        }
+//        }
 
         if (isset($bundles['SonataNotificationBundle'])) {
             $loader->load('consumer.xml');
